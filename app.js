@@ -101,9 +101,13 @@ var editTask=function(){
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
+        label.classList.toggle("field-hide");
+        editInput.className="main__list-input field-hide";
         editBtn.innerText="Edit";
     }else{
         editInput.value=label.innerText;
+        editInput.className="main__list-input input main__task";
+        label.classList.toggle("field-hide");
         editBtn.innerText="Save";
     }
 
